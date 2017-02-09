@@ -24,13 +24,14 @@ label{
 
 .login-button{
 	margin: 10px;
-	width: 100%;
+	width: 50%;
 	height: 60%;
 	font-size: 14px;
 	font-family: arial; 
 	font-style: bold;
 	border-radius: 0px;
 	background-color: #00B4FF;
+	display: block;
 
 }
 
