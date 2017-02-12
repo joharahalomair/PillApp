@@ -5,7 +5,7 @@ body, html{
     width: 90%;
     max-width: 760px;
  	background-color: #3F3F40;
- 	margin: 20px;
+ 	margin: 0px 15px 15px 15px;
 
 }
 
@@ -15,11 +15,26 @@ h1.title {
 	font-weight: 400; 
 	color: #00B4FF;
 }
-label{
+
+
+label {
 	font-size: 16px;
 	font-family: avenir-black; 
 	color: #FFFFFF;
+}
 
+.header-label {
+	margin-top: 4px;
+	font-size: 16px;
+	font-family: avenir-black; 
+	color: #FFFFFF;
+}
+
+.main-label {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: avenir-black; 
+	color: #FFFFFF;
 }
 
 .login-button{
@@ -39,8 +54,25 @@ label{
 	width: 100%;
 }
 
-img{
+img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 20px;
+}
+
+
+.green-check {
+	margin-top: 3px;
+	margin-bottom: 6px;
+	height: 30px;
+	width: auto;
+}
+
+.med-item {
+	margin: 10px;
+	border-bottom: 1px solid #ccc;
+	font-size: 25px;
+	font-family: avenir-black;
+	color: #FFFFFF
 }
