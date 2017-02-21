@@ -38,14 +38,21 @@ $(document).ready(function generateMedList() {
                     <label>8:00 am</label> \
                 </div> \
                 <div class='row'> \
-                    <img class='col-xs-4 green-check' src='assets/greenCheck.png'> \
+                    <img class='col-xs-4 green-check' src='assets/emptyCircle.png'> \
                     <div class='col-xs-8'>Adderall</div> \
                 </div> \
                 <div class='row'> \
                     <img class='col-xs-4 green-check' src='assets/greenCheck.png'> \
-                    <div class='col-xs-8'>Adderall</div> \
+                    <div class='col-xs-8'>Advil</div> \
                 </div> \
             </div>"
         );
     }
 });
+
+$(document).ready(function generateMedication() {
+    "<div class='row'> \
+        <img class='col-xs-4 green-check' src='assets/greenCheck.png'> \
+        <div class='col-xs-8'>Adderall</div> \
+    </div>"
+})

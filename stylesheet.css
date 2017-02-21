@@ -28,10 +28,6 @@ label {
 	color: #3F3F40;
 }
 
-#currentDate {
-	text-align: right;
-}
-
 .main-label {
 	font-size: 20px;
 	font-weight: bold;
@@ -48,8 +44,6 @@ label {
 	font-style: bold;
 	border-radius: 0px;
 	background-color: #00B4FF;
-	display: block;
-
 }
 
 .input-group{
@@ -63,6 +57,25 @@ img {
 	margin-top: 20px;
 }
 
+
+/*Main Dashboard*/
+#mainDashboard {
+	margin: 4px 0px 0px 10px;
+}
+
+.header {
+	margin-bottom: 5px;
+	margin-top: -2%;
+	margin-left: -15%;
+	margin-right: -15%;
+	padding: 3%;
+	background-color: #baf3ff;
+	box-shadow: 0px 1px 5px #000000;
+}
+
+#currentDate {
+	text-align: right;
+}
 
 .green-check {
 	margin-top: 3px;
