@@ -1,9 +1,13 @@
 
 
 body, html{
-    height: 100%;
-    width: 90%;
-    max-width: 760px;
+    -moz-height: 100%;
+    -moz-width: 90%;
+    -moz-max-width: 760px;
+    -webkit-height: 100%;
+    -webkit-width: 90%;
+    -webkit-max-width: 760px;
+    
  	background-color: #3F3F40;
  	margin: 20px;
 
