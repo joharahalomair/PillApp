@@ -149,7 +149,44 @@ img {
 	margin-top: 20px;
 }
 
+.scrollable-menu {
+    height: auto;
+    max-height: 150px;
+    overflow-x: hidden;
+}
+ .hour {
+    position: relative;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    overflow-y: scroll; 
+    align-content: left;
+ }
 
+ .minute {
+    position: relative;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    overflow-y: scroll; 
+    align-content: center;
+ }
+  
+  
+ .midday {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: scroll;
+    width: 30%;
+    align-content: right;
+ }
+li{
+
+}
 /*Main Dashboard*/
 #mainDashboard {
 	margin: 4px 0px 0px 10px;
