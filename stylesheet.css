@@ -366,10 +366,6 @@ li{
 
 }
 /*Main Dashboard*/
-#mainDashboard {
-	margin: 4px 0px 0px 10px;
-}
-
 .header {
 	margin-bottom: 5px;
 	margin-top: -2%;
@@ -406,5 +402,5 @@ li{
     position: fixed;
     bottom: 2%;
     right: 14%; 
-	width: 13%;
+    width: 80px;
 }
