@@ -22,15 +22,16 @@ if(mm<10) {
 } 
 today = mm+'/'+dd+'/'+yyyy;
 
-$(document).ready(function getDayName() {
+function getDayName() {
     $("#dayName").html(weekday[d.getDay()]);
-});
+};
 
-$(document).ready(function getCurrentDate() {
+function getCurrentDate() {
     $("#currentDate").html(today);
-});
+};
 
-$(document).ready(function generateMedList() {
+function generateMedList() {
+    console.log('ready');
     for (i = 0; i < weekday.length; i++) {
         $("#medicationList").append(
             "<div class='row med-item col-xs-12'> \
@@ -48,11 +49,11 @@ $(document).ready(function generateMedList() {
             </div>"
         );
     }
-});
+};
 
-$(document).ready(function generateMedication() {
+function generateMedication() {
     "<div class='row'> \
         <img class='col-xs-4 green-check' src='assets/greenCheck.png'> \
         <div class='col-xs-8'>Adderall</div> \
     </div>"
-})
+};
