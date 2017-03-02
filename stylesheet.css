@@ -214,6 +214,7 @@ body{
 .form-signin .form-signin-heading,
 .form-signin .checkbox, .form-signup .form-signup-heading {
   margin-bottom: 10px;
+	font-size: 20px;
 }
 .form-signin .checkbox {
   font-weight: normal;
