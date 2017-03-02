@@ -34,7 +34,7 @@ function generateMedList() {
     console.log('ready');
     for (i = 0; i < weekday.length; i++) {
         $("#medicationList").append(
-            "<div class='row med-item col-xs-12'> \
+            "<div class='row med-item col-s-12'> \
                 <div class='row'> \
                     <label>8:00 am</label> \
                 </div> \
