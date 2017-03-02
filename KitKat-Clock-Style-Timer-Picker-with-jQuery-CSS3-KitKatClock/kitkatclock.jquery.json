@@ -1,0 +1,30 @@
+{
+    "name": "kitkatclock",
+    "title": "jQuery KitKat Clock",
+    "description": "jQuery plugin for Android 4.4 'KitKat' styled timepicker.",
+    "keywords": [
+        "time",
+        "timepicker",
+        "clock",
+        "android",
+        "html5",
+        "canvas",
+        "kitkat"
+    ],
+    "version": "0.5.4",
+    "author": {
+        "name": "Bryan Iddings"
+    },
+    "licenses": [
+        {
+            "type": "CC",
+            "url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+        }
+    ],
+    "homepage": "https://github.com/bryaniddings/KitKatClock",
+    "docs": "http://iddings.co/KitKatClock",
+    "download": "https://raw.githubusercontent.com/bryaniddings/KitKatClock/master/KitKatClock.min.js",
+    "dependencies": {
+        "jquery": ">=1.9"
+    }
+}
