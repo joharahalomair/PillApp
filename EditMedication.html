@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js" ></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="/js/lib/KitKatClock.js" ></script>
+		<script  src="/js/datetimepicker.js" ></script>
+		<script src="JS/script.js"></script>
+
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="row main">
+				<div class="main-center">
+					<form class="form-addmedication">
+				        <h1 class="form-medicationname">Edit Medication</h1>
+				        <label for="inputMedicationName" class="sr-only">Medication Name</label>
+				        <input type="medicationname" id="inputMedicationName" class="form-control" placeholder="Medication Name" required autofocus>
+
+				        <label for="inputDosage" class="sr-only">Medication Dosage</label>
+				        <input type="medicationdosage" id="inputMedicationDosage" class="form-control" placeholder="Dosage" required autofocus>
+				        <div class="time">
+						<h4 class="times">Time</h4>
+						<button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add a time</button>
+						<div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Select a time</h4>
+									</div>
+									<div class="modal-body">
+										<div class="picker-container"></div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				        <div class="checkbox abc-checkbox-circle">
+				          <h4 for="days" class="days">Days</h4>
+				          <label class = "day">
+				            <input type="checkbox" class ="styled" value="Day"> Mondays
+				          </label>
+				          <label class = "day">
+				            <input type="checkbox" class ="day" value="Day"> Tuesday
+				          </label>
+				          <label class = "day">
+				            <input type="checkbox" class ="day" value="Day"> Wednesday
+				          </label>
+				          <label class = "day">
+				            <input type="checkbox" class ="day" value="Day"> Thursday
+				          </label>
+				          <label class = "day">
+				            <input type="checkbox" class ="day" value="Day"> Friday
+				          </label>
+				          <label class = "day">
+				            <input type="checkbox" class ="day" value="Day"> Saturday
+				          </label>
+				          <label class = "day">
+				            <input type="checkbox" class ="day" value="Day"> Sunday
+				          </label>
+				        </div>
+
+				        <div class="repeat">
+				          <h4 for="repeats" class="days">Repeat Every</h4>
+				          <button class ="btn btn-block">Week</button>
+				          <button class ="btn btn-block">2 Weeks</button>
+				          <button class ="btn btn-block">3 Weeks</button>
+				          <button class ="btn btn-block">Month</button>
+				        </div>
+				        <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+				        <button class="btn btn-lg btn-primary btn-block" type="submit">Cancel</button>
+
+				     </form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
