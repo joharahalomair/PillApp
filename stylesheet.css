@@ -269,9 +269,14 @@ body{
 
 h1.title, h1 { 
 	font-size: 30px;
-	font-family: avenir-black; 
+	font-family:'Roboto', sans-serif;
 	font-weight: 400; 
-	color: #00B4FF;
+	color: #b2b2b2;
+	text-align: center;
+}
+
+hr{
+	margin-bottom: 40px;
 }
 
 label {
