@@ -1,4 +1,4 @@
-
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 
 body, html{
     -moz-height: 100%;
@@ -7,8 +7,7 @@ body, html{
     -webkit-height: 100%;
     -webkit-width: 90%;
     -webkit-max-width: 760px;
-    
- 	background-color: #3F3F40;
+ 	background-color: #d1d1d1;
  	margin: 20px;
 
 }
@@ -21,15 +20,15 @@ body{
 	position: relative;
   	transform: perspective(1px) translateX()(-50%);
 	font-family: sans-serif;
-	border-radius: 8px;
+	border-radius: 3px;
   	padding-top: 40px;
   	padding-bottom: 40px;
   	padding-right: 40px;
   	padding-left: 40px;
-  	background-color: #eee;
+  	background-color: #ffffff;
 }
+
 /*time clock*/
-@import url(http://fonts.googleapis.com/css?family=Roboto);
 
 
 
