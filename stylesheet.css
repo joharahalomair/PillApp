@@ -310,7 +310,7 @@ label {
 
 .repeat .btn{
   background-color: #33b5e5;
-  color: white;
+  color: #ffffff;
   margin-top:10px;
   margin-bottom: 10px; 
 
@@ -319,6 +319,7 @@ label {
 .btn{
 	background-color: #33b5e5;
 	border-color: #33b5e5;
+	color: #ffffff;
 }
 
 .input-group{
