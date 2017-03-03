@@ -314,6 +314,10 @@ label {
 	color: #ffffff;
 }
 
+#Cancel, #Save{
+	display: inline-block;
+}
+
 .input-group{
 	width: 100%;
 }
