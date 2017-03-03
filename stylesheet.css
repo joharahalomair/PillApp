@@ -251,15 +251,6 @@ body{
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.days{
-	color: #000000;
-}
-
-.day{
-	font-family: helvetica;
-	font-size: 16px;
-	color: #4f4f65;
-}
 
 .checkbox{
 	margin-top: 20px;
