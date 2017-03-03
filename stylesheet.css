@@ -334,7 +334,10 @@ img {
 	margin-right: auto;
 	margin-top: 20px;
 }
-
+.time, .days{
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
 
 /*Main Dashboard*/
 .header {
