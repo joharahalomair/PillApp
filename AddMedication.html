@@ -19,6 +19,7 @@
 				<div class="main-center">
 					<form class="form-addmedication">
 				        <h1 class="form-medicationname">Add Medication</h1>
+					<hr>
 				        <label for="inputMedicationName" class="sr-only">Medication Name</label>
 				        <input type="medicationname" id="inputMedicationName" class="form-control" placeholder="Medication Name" required autofocus>
 
@@ -69,16 +70,25 @@
 				          </label>
 				        </div>
 
-				        <div class="repeat">
-				          <h4 for="repeats" class="days">Repeat Every</h4>
-				          <button class ="btn btn-block">Week</button>
-				          <button class ="btn btn-block">2 Weeks</button>
-				          <button class ="btn btn-block">3 Weeks</button>
-				          <button class ="btn btn-block">Month</button>
+				    	<div class="repeat">
+						<h4 for="repeats" class="days">Repeat Every</h4>
+						<label class = "day">
+							<input type="checkbox" class ="day" value="Day"> Week
+						</label>
+						<label class = "day">
+							<input type="checkbox" class ="day" value="Day"> 2 Weeks
+						</label>
+						<label class = "day">
+							<input type="checkbox" class ="day" value="Day"> 3 Weeks
+						</label>
+						<label class = "day">
+							<input type="checkbox" class ="day" value="Day"> Month
+						</label>
 				        </div>
-				        <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
-				        <button class="btn btn-lg btn-primary btn-block" type="submit">Cancel</button>
-
+					<div class="btn-group btn-group-lg" role="group">
+						 <button type="button" class="btn btn-default">Cancel</button>
+						<button type="button" class="btn btn-default">Save</button>
+					</div>
 				     </form>
 				</div>
 			</div>
