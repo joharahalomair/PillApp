@@ -40,11 +40,11 @@ function generateMedList() {
                 </div> \
                 <div class='row'> \
                     <img class='col-xs-4 green-check' src='assets/emptyCircle.png'> \
-                    <div class='col-xs-8'>Adderall</div> \
+                    <div class='col-xs-8 medName'>Adderall</div> \
                 </div> \
                 <div class='row'> \
                     <img class='col-xs-4 green-check' src='assets/greenCheck.png'> \
-                    <div class='col-xs-8'>Advil</div> \
+                    <div class='col-xs-8 medName'>Advil</div> \
                 </div> \
             </div>"
         );
