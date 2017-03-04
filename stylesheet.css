@@ -392,3 +392,16 @@ label {
   background-size:100% 100%;
   background-repeat: no-repeat;
 }
+
+#medTime{
+	color: #000000;
+}
+
+.medName{
+	font-size: 22px;
+	font-style: bold;
+	font-family: 'Oxygen', sans-serif;
+	color:#347ea3;
+}
+
+
