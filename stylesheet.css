@@ -314,9 +314,9 @@ label {
 	width: 100%;
 }
 
-img {
-	width: 90%;
-	height:90%;
+.logo {
+	width: 50%;
+	height:50%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
