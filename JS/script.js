@@ -36,7 +36,7 @@ function generateMedList() {
         $("#medicationList").append(
             "<div class='row med-item col-s-12'> \
                 <div class='row'> \
-                    <label>8:00 am</label> \
+                    <label id='medTime'>8:00 am</label> \
                 </div> \
                 <div class='row'> \
                     <img class='col-xs-4 green-check' src='assets/emptyCircle.png'> \
