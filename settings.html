@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link = rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="settings">Settings</h1>
+    <form class="settings">
+      <div class="row">
+        <label for="all-notifications" class="settings-label">All Notifications</label>
+        <input class="select1" type="checkbox"/>
+      </div>
+
+      <div class="row sub-p">
+        <label for="on-time" class="subsettings-label">On Time</label>
+        <input class="select1-1" type="checkbox"/>
+      </div>
+
+      <div class="row sub-p">
+        <label for="on-refill"class="subsettings-label">On Refill</label>
+        <input class="select1-2" type="checkbox"/>
+      </div>
+
+      <div class="row sub-p">
+        <label for="text"class="subsettings-label">Text</label>
+        <input class="select1-3" type="checkbox"/>
+      </div>
+
+      <div class="row sub-p">
+        <label for="email"class="subsettings-label">Email</label>
+        <input class="select1-4" type="checkbox"/>
+      </div>
+
+      <div class="row">
+        <label for="enable-pin" class="settings-label">Enable Pin</label>
+        <input class="select2" type="checkbox"/>
+      </div>
+
+      <div class="row">
+        <label for="change-pin" class="settings-label">Change Pin</label>
+        <input class="select3" type="checkbox"/>
+      </div>
+
+      <button id="save-cancel" class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+
+      <button id="save-cancel" class="btn btn-lg btn-primary btn-block" type="submit">Cancel</button>
+    </form>
+  </div>
+
+  <script>
+    $(document).ready(function checkBoxes(){
+    $( ".select" ).prop( "checked", true );
+    });
+  </script>
+</body>
+</html>
