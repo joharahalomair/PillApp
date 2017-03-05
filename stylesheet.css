@@ -406,4 +406,13 @@ label {
 	color:#347ea3;
 }
 
+/*-----------------------------SETTINGS----------------------------*/
+.sub-p {
+padding-left: 2em;
+}
 
+.select {
+float: right;
+clear: right;
+border: 3px solid black;
+}
