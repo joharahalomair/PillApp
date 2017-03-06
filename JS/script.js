@@ -7,20 +7,28 @@ weekday[3] = "Wednesday";
 weekday[4] = "Thursday";
 weekday[5] = "Friday";
 weekday[6] = "Saturday";
+weekday[7] = "Sunday";
 
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth()+1; //January is 0!
 var yyyy = today.getFullYear();
 
-if(dd<10) {
-    dd='0'+dd
-} 
+function formatDD(day) {
+    if(day<10) {
+        return '0'+day
+    } 
+    return day;
+}
 
 if(mm<10) {
     mm='0'+mm
 } 
-today = mm+'/'+dd+'/'+yyyy;
+
+today = mm+'/'+(formatDD(dd))+'/'+yyyy;
+console.log(today);
+tomorrowdd=dd+1;
+tomorrow = mm+'/'+(formatDD(tomorrowdd))+'/'+yyyy;
 
 function getDayName() {
     $("#dayName").html(weekday[d.getDay()]);
@@ -28,6 +36,14 @@ function getDayName() {
 
 function getCurrentDate() {
     $("#currentDate").html(today);
+};
+
+function getTomorrowName() {
+    $("#tomorrowName").html(weekday[d.getDay()+1]);
+}
+
+function getTomorrowDate() {
+    $("#tomorrowDate").html(tomorrow);
 };
 
 function generateMedList() {
