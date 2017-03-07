@@ -4,12 +4,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="clockpicker-gh-pages/dist/bootstrap-clockpicker.min.css">
+		<link rel="stylesheet" type="text/css" href="clockpicker-gh-pages/assets/css/github.min.css">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js" ></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="/js/lib/KitKatClock.js" ></script>
 		<script  src="/js/datetimepicker.js" ></script>
-		<script src="JS/script.js"></script>
+		<script src="javascript.js"></script>
 
 
 	</head>
@@ -19,34 +22,58 @@
 				<div class="main-center">
 					<form class="form-addmedication">
 				        <h1 class="form-medicationname">Add Medication</h1>
-					<hr>
+				        <hr>
 				        <label for="inputMedicationName" class="sr-only">Medication Name</label>
 				        <input type="medicationname" id="inputMedicationName" class="form-control" placeholder="Medication Name" required autofocus>
 
 				        <label for="inputDosage" class="sr-only">Medication Dosage</label>
 				        <input type="medicationdosage" id="inputMedicationDosage" class="form-control" placeholder="Dosage" required autofocus>
-				        <div class="time">
-						<h4 class="times">Time</h4>
-						<button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add a time</button>
-						<div class="modal fade" id="myModal" role="dialog">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4 class="modal-title">Select a time</h4>
-									</div>
-									<div class="modal-body">
-										<div class="picker-container"></div>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        
+<!-- 						<div class="time">
+							<h4 class="times">Time</h4>
+							<button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add a time</button>
+							<div class="modal fade" id="myModal" role="dialog">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+											<h4 class="modal-title">Select a time</h4>
+										</div>
+										<div class="modal-body">
+											<div class="picker-container"></div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										</div>
 									</div>
 								</div>
 							</div>
+						</div> -->
+<!-- 
+						<div class ="time form-group">
+							<h4 class="times">Time</h4>
+							<div class="input-group clockpicker">
+								<input type="text" class="form-control" value="09:30">
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-time"></span>
+								</span>
+							</div>
+						</div> -->
+						<div class="time form-group">
+						<h4 class="times">Time</h4>
+							<div class="clearfix">
+								<div class="input-group clockpicker-with-callbacks">
+									<input type="text" class="form-control" value="10:10">
+									<span class="input-group-addon">
+										<span class="glyphicon glyphicon-time"></span>
+									</span>
+								</div>
+							</div>
 						</div>
-					</div>
-				        <div class="checkbox abc-checkbox-circle">
-				          <h4 for="days" class="days">Days</h4>
+
+
+				        <div class="days checkbox abc-checkbox-circle">
+				          <h4 for="days">Days</h4>
 				          <label class = "day">
 				            <input type="checkbox" class ="styled" value="Day"> Mondays
 				          </label>
@@ -70,29 +97,100 @@
 				          </label>
 				        </div>
 
-				    	<div class="repeat">
-						<h4 for="repeats" class="days">Repeat Every</h4>
-						<label class = "day">
-							<input type="checkbox" class ="day" value="Day"> Week
-						</label>
-						<label class = "day">
-							<input type="checkbox" class ="day" value="Day"> 2 Weeks
-						</label>
-						<label class = "day">
-							<input type="checkbox" class ="day" value="Day"> 3 Weeks
-						</label>
-						<label class = "day">
-							<input type="checkbox" class ="day" value="Day"> Month
-						</label>
+				        <div class="repeat">
+							<h4 for="repeats" class="days">Repeat Every</h4>
+							<label class = "day">
+								<input type="checkbox" class ="day" value="Day"> Week
+							</label>
+							<label class = "day">
+								<input type="checkbox" class ="day" value="Day"> 2 Weeks
+							</label>
+							<label class = "day">
+								<input type="checkbox" class ="day" value="Day"> 3 Weeks
+							</label>
+							<label class = "day">
+								<input type="checkbox" class ="day" value="Day"> Month
+							</label>
 				        </div>
-					<div class="col-sm-12 text-center">
-        					<button id="Cancel" class="btn btn-md center-block" Style="width: 100px;">Cancel</button>
-         					<button id="Save" class="btn btn-md center-block" Style="width: 100px;">Save</button>
-						
-     					</div>
+
+
+				        <div class="btn-group btn-group-lg" role="group">
+						 	<button type="button" class="btn btn-default">Cancel</button>
+						 	<button type="button" class="btn btn-default">Save</button>
+						</div>
+				       <!--  <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+				        <button class="btn btn-lg btn-primary btn-block" type="submit">Cancel</button> -->
+
 				     </form>
 				</div>
 			</div>
 		</div>
+
+
+<script type="text/javascript" src="clockpicker-gh-pages/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="clockpicker-gh-pages/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="clockpicker-gh-pages/dist/bootstrap-clockpicker.min.js"></script>
+<script type="text/javascript">
+$('.clockpicker').clockpicker()
+	.find('input').change(function(){
+		console.log(this.value);
+	});
+var input = $('#single-input').clockpicker({
+	placement: 'bottom',
+	align: 'left',
+	autoclose: true,
+	'default': 'now'
+});
+
+$('.clockpicker-with-callbacks').clockpicker({
+		donetext: 'Done',
+		init: function() { 
+			console.log("colorpicker initiated");
+		},
+		beforeShow: function() {
+			console.log("before show");
+		},
+		afterShow: function() {
+			console.log("after show");
+		},
+		beforeHide: function() {
+			console.log("before hide");
+		},
+		afterHide: function() {
+			console.log("after hide");
+		},
+		beforeHourSelect: function() {
+			console.log("before hour selected");
+		},
+		afterHourSelect: function() {
+			console.log("after hour selected");
+		},
+		beforeDone: function() {
+			console.log("before done");
+		},
+		afterDone: function() {
+			console.log("after done");
+		}
+	})
+	.find('input').change(function(){
+		console.log(this.value);
+	});
+
+// Manually toggle to the minutes view
+$('#check-minutes').click(function(e){
+	// Have to stop propagation here
+	e.stopPropagation();
+	input.clockpicker('show')
+			.clockpicker('toggleView', 'minutes');
+});
+if (/mobile/i.test(navigator.userAgent)) {
+	$('input').prop('readOnly', true);
+}
+</script>
+<script type="text/javascript" src="clockpicker-gh-pages/assets/js/highlight.min.js"></script>
+<script type="text/javascript">
+hljs.configure({tabReplace: '    '});
+hljs.initHighlightingOnLoad();
+</script>
 	</body>
 </html>
