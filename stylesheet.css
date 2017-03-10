@@ -248,6 +248,30 @@ label {
 .caret{
 	float: right;
 }
+
+.repeatbtn {
+	background-color: white;
+	border-color: #9E9E9E;
+	color: #9E9E9E;
+	font-size: 14px;
+	margin-left: 12px;
+	text-align: left;
+	display: inline-block;
+
+}
+.repeatbtn:hover{
+	background-color: #d1d1d1;
+	border-color: #9E9E9E;
+	color: #9E9E9E;
+
+}
+
+.week{
+	display: inline-block;
+	text-indent: 5px;
+}
+
+
 .input-group{
 	width: 100%;
 }
