@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -10,9 +11,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js" ></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="/js/lib/KitKatClock.js" ></script>
-		<script  src="/js/datetimepicker.js" ></script>
-		<script src="javascript.js"></script>
 
 
 	</head>
@@ -26,8 +24,17 @@
 				        <label for="inputMedicationName" class="sr-only">Medication Name</label>
 				        <input type="medicationname" id="inputMedicationName" class="form-control" placeholder="Medication Name" required autofocus>
 
-				        <label for="inputDosage" class="sr-only">Medication Dosage</label>
-				        <input type="medicationdosage" id="inputMedicationDosage" class="form-control" placeholder="Dosage" required autofocus>
+				       <div class="dosage dropdown">
+					        <label for="inputDosage" class="sr-only">Medication Dosage</label>
+					        <button type="medicationdosage" class="dosagebtn btn btn-default dropdown-toggle btn-lg btn-primary btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Dosage <span class="caret"></span></button>
+					          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							    <li><a href="#">Action</a></li>
+							    <li><a href="#">Another action</a></li>
+							    <li><a href="#">Something else here</a></li>
+							    <li role="separator" class="divider"></li>
+							    <li><a href="#">Separated link</a></li>
+							  </ul>
+				        </div>
 				        
 <!-- 						<div class="time">
 							<h4 class="times">Time</h4>
@@ -61,7 +68,7 @@
 						</div> -->
 						<div class="time form-group">
 						<h4 class="times">Time</h4>
-							<div class="clearfix">
+							<div class="clearfix timecontainer">
 								<div class="input-group clockpicker-with-callbacks">
 									<input type="text" class="form-control" value="10:10">
 									<span class="input-group-addon">
@@ -70,6 +77,7 @@
 								</div>
 							</div>
 						</div>
+						<div><button class="glyphicon glyphicon-plus-sign btn" id="addAnotherTime"></button></div>
 
 
 				        <div class="days checkbox abc-checkbox-circle">
@@ -99,17 +107,17 @@
 
 				        <div class="repeat">
 							<h4 for="repeats" class="days">Repeat Every</h4>
-							<label class = "day">
-								<input type="checkbox" class ="day" value="Day"> Week
+							<label class = "repeatevery">
+								<input type="checkbox" class ="repeatevery" value="Day"> Week
 							</label>
-							<label class = "day">
-								<input type="checkbox" class ="day" value="Day"> 2 Weeks
+							<label class = "repeatevery">
+								<input type="checkbox" class ="repeatevery" value="Day"> 2 Weeks
 							</label>
-							<label class = "day">
-								<input type="checkbox" class ="day" value="Day"> 3 Weeks
+							<label class = "repeatevery">
+								<input type="checkbox" class ="repeatevery" value="Day"> 3 Weeks
 							</label>
-							<label class = "day">
-								<input type="checkbox" class ="day" value="Day"> Month
+							<label class = "repeatevery">
+								<input type="checkbox" class ="repeatevery" value="Day"> Month
 							</label>
 				        </div>
 
@@ -117,7 +125,7 @@
 				        <div class="btn-group btn-group-lg" role="group">
 						 	<button type="button" class="btn btn-default">Cancel</button>
 						 	<button type="button" class="btn btn-default">Save</button>
-						</div>
+					</div>
 				       <!--  <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
 				        <button class="btn btn-lg btn-primary btn-block" type="submit">Cancel</button> -->
 
@@ -125,6 +133,15 @@
 				</div>
 			</div>
 		</div>
+		
+<script src ="JS/script.js"></script>
+<script type="text/javascript">
+	 //$("#btnAddAddress").click(addAnotherTime());
+	 $("#addAnotherTime").click(function () {
+  	$(".timecontainer:first").clone().appendTo("#time"); 
+	});
+	 $('.dropdown-toggle').dropdown()
+</script>
 
 
 <script type="text/javascript" src="clockpicker-gh-pages/assets/js/jquery.min.js"></script>
