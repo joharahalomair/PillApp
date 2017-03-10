@@ -2,7 +2,11 @@
 session_start();
 include "head.php";
 require("connectiondatabase.php");
-
+?>
+<body>
+	<header>
+		
+	<?php
 	if($CONNEXION)		   
 	{			
 			   session_start();
