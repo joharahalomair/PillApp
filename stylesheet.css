@@ -18,8 +18,13 @@ body, html{
 body{
     height: 100%;
     width: 90%;
+    max-width:460px;
+    max-height:800px;
+    min-width:460px;
+    min-height:800px;
  	background-color: #fffdea;
- 	margin: 0px 15px 15px 15px;
+ 	margin:auto;
+ 	margin-bottom: 10px;
 	position: relative;
   	transform: perspective(1px) translateX()(-50%);
 	font-family: sans-serif;
@@ -29,182 +34,77 @@ body{
   	padding-right: 40px;
   	padding-left: 40px;
   	background-color: #ffffff;
+  	font-family: 'Oxygen', sans-serif;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.container{
+	position:relative;
+	margin: auto;
+}
+
 
 /*time clock*/
-
-
-
-.swipe{
-	background-color:#fff;
-	overflow:hidden;
-	width:320px;
-	float:left;
-	position:relative;
-	font-family:'Roboto', sans-serif;
+.spiralContainer {
+  border-radius: 50%;
+  width:200px;
+  height:200px;
+  overflow:hidden;
+  margin:20px;
+  
+  -webkit-animation: spin 3s linear 0s infinite reverse;
+  -moz-animation: spin 3s linear 0s infinite reverse;  
+  -ms-animation: spin 3s linear 0s infinite reverse;
+  -o-animation: spin 3s linear 0s infinite reverse;
+  animation: spin 3s linear 0s infinite reverse;
+  
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;  
+  animation-play-state: paused;
 }
-.swipe-wrap{
-	overflow:hidden;
-	border-bottom:1px solid #ccc;
-	width:800px;
+.spiral {
+  width:200px;
+  height:200px;
+  border-radius: 50%;
+  background-image: url("assets/pillboxLogosmall.png");
+  background-size: 70%;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  
+  
+  -webkit-animation: spin 6s linear 0s infinite normal;
+  -moz-animation: spin 6s linear 0s infinite normal;
+  -ms-animation: spin 6s linear 0s infinite normal;
+  -o-animation: spin 6s linear 0s infinite normal;
+  animation: spin 6s linear 0s infinite normal;
 }
-.swipe-wrap>div{
-	width:80px;
-	float:left;
-	position:relative;
-	color:#e8e8e8;
-	display:inline;
-	text-align:center;
-	text-transform:uppercase;
-	font-size:12px;
-	padding:10px 0;
+.spiralContainer:hover {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
 }
-.swipe-wrap>div.active{
-	font-size:16px;
-	background-color:#eee;
-	color:#222;
-	border-bottom:3px solid #f44336;
+@keyframes spin {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
 }
-.swipe-wrap>div.active font{
-	font-size:50px;
+@-webkit-keyframes spin {
+  0% {-webkit-transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(0deg); }
 }
-.swipe-wrap>div>font{
-	font-size:40px;
+@-ms-keyframes spin {
+  0% {-ms-transform: rotate(360deg); }
+  100% { -ms-transform: rotate(0deg); }
 }
-.picker-container{
-	clear:both;
-	width:280px;
-	padding:20px;
-	background-color:#f2f2f2;
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(360deg); }
+  100% { -moz-transform: rotate(0deg); }
 }
-.kitkat-container{
-	clear:both;
-	width:250px;
-	height:333px;
-	margin:auto;
-	background-color:#f2f2f2;
-	font-family:'Roboto', sans-serif;color:#909090;
-}
-.kitkat-time{
-	height:15%;
-	width:100%;
-	background-color:#fff;
-	text-align:center;
-	font-size:30pt;
-}
-.kitkat-time-active{
-	color:#33b5e5;
-}
-.kitkat-am-pm{
-	font-size:15pt;
-	font-weight:bold;
-	cursor:pointer;
-}
-.kitkat-clock{
-	height:75%;
-	width:100%;
-	position:relative;
-	cursor:pointer;
-}
-.kitkat-done{
-	height:calc(10% - 1px);
-	border-top:1px solid #CCC;
-	width:100%;
-	text-align:center;
-	font-size:150%;
-	cursor:pointer;
-}
-.kitkat-hour{
-	cursor:pointer;
-}
-.kitkat-minute{
-	cursor:pointer;
-}
-.kitkat-clock-body{
-	position:relative;
-	top:5%;
-	left:5%;
-	width:90%;
-	height:90%;
-	border-radius:50%;
-	background-color:#fff;
-}
-.kitkat-clock-hours{
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-}
-.kitkat-clock-minutes{
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-}
-.kitkat-clock-hand{
-	position:absolute;
-	top:5%;
-	left:calc(50% - 12pt);
-	width:24pt;
-	height:90%;
-	opacity:.6;
-}
-.kitkat-clock-hand-line{
-	position:absolute;
-	top:24pt;
-	left:calc(50% - 2px);
-	width:2px;
-	height:calc(50% - 24pt);
-	background-color:#33b5e5;
-}
-.kitkat-clock-hand-end{
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:24pt;
-	background-color:#33b5e5;
-	border-radius:50%;
-}
-.kitkat-clock-cover{
-	position:absolute;
-	top:5%;
-	left:5%;
-	width:90%;
-	height:90%;
-	border-radius:50%;
-}
-.kitkat-clock-am{
-	position:absolute;
-	left:5px;
-	bottom:5px;
-	width:15%;
-	height:15%;
-	background-color:#fff;
-	border-radius:50%;
-	text-align:center;
-	cursor:pointer;
-}
-.kitkat-clock-pm{
-	position:absolute;
-	right:5px;
-	bottom:5px;
-	width:15%;
-	height:15%;
-	background-color:#fff;
-	border-radius:50%;
-	text-align:center;
-	cursor:pointer;
-}
-.kitkat-clock-am-pm-active{
-	background-color:#33b5e5;
-	color:#fff;
-}
-.kitkat-clock-am span,.kitkat-clock-pm span{
-	padding-top:calc(50% - 10px);
-	display:inline-block;
+@-o-keyframes spin {
+  0% { -o-transform: rotate(360deg); }
+  100% { -o-transform: rotate(0deg); }
 }
 
 
@@ -302,16 +202,52 @@ label {
 	background-color: #33b5e5;
 }
 
+.repeat {
+	margin-bottom: 40px; 
+}
+
 .btn{
 	background-color: #33b5e5;
 	border-color: #33b5e5;
 	color: #ffffff;
 }
 
-#Cancel, #Save{
-	display: inline-block;
+.btn-group{
+	border-color: #1f708e;
+	border-width: 3px;
+	font-family: sans-serif
+
+}
+.dosagebtn {
+	margin-top: 20px;
+	background-color: white;
+	border-color: #9E9E9E;
+	color: #9E9E9E;
+	font-size: 14px;
+	text-align: left;
+
+}
+.dosagebtn:hover{
+	margin-top: 20px;
+	background-color: #d1d1d1;
+	border-color: #9E9E9E;
+	color: #9E9E9E;
+
+}
+.dosagebtn:active{
+	margin-top: 20px;
+	background-color: white;
+	border-color: #9E9E9E;
+	color: #9E9E9E;
+	font-size: 14px;
+	text-align: left;
+
 }
 
+
+.caret{
+	float: right;
+}
 .input-group{
 	width: 100%;
 }
@@ -325,13 +261,28 @@ label {
 	margin-top: 20px;
 }
 
-.repeat{
-	margin-bottom: 30px;
+.repeatevery{
+	font-weight: normal;
 }
 
 .time, .days{
 	margin-top: 40px;
 	margin-bottom: 20px;
+}
+h4{
+	font-family:'Roboto', sans-serif;;
+}
+#addAnotherTime{
+	background-color: #33b5e5;
+	border-color: #33b5e5;
+	color: #ffffff;
+
+}
+
+#addAnotherTime:hover{
+	background-color: #9E9E9E;
+	border-color: #9E9E9E;
+	color: #ffffff;
 }
 
 .times{
