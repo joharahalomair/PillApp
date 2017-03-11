@@ -1,8 +1,8 @@
-<!doctype html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link = rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	</head>
 	<body>
@@ -18,16 +18,16 @@
 					</div>
 				</div>
 				<div class="main-login main-center">
-					<form class="form-signup">
+					<form method= "post" class="form-signup" action="processcreateaccount.php">
 				        <h2 class="form-signup-heading">Create Account</h2>
 					<label for="inputEmail" class="sr-only">Email address</label>
-				        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+				        <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
 					<label for="inputPhoneNumber" class="sr-only">Phone Number</label>
-				        <input type="phonenumber" id="inputPhoneNumber" class="form-control" placeholder="Phone Number" required autofocus>
+				        <input name="phone" type="phonenumber" id="inputPhoneNumber" class="form-control" placeholder="Phone Number" required autofocus>
 				        <label for="inputPassword" class="sr-only">Password</label>
-				        <input type="password" id="inputPassword" class="form-control" placeholder="PIN" required>
+				        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="PIN" required>
 				        <label for="inputPassword" class="sr-only">Confirm Password</label>
-				        <input type="confirmpassword" id="inputPassword" class="form-control" placeholder="Confirm PIN" required>
+				        <input name="confirmpassword" type="confirmpassword" id="inputPassword" class="form-control" placeholder="Confirm PIN" required>
 				        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
 				     </form>
 

@@ -1,8 +1,8 @@
-<!doctype html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link = rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	</head>
 	<body>
@@ -17,19 +17,19 @@
 					</div>
 				</div>
 				<div class="main-login main-center">
-					<form class="form-signin" action="mainDashboard.html">
+					<form class="form-signin" action="mainDashboard.php">
 				        <h2 class="form-signin-heading">Please sign in</h2>
 				        <label for="inputEmail" class="sr-only">Email Address</label>
-				        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+				        <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
 				        <label for="inputPassword" class="sr-only">Password</label>
-				        <input type="password" id="inputPassword" class="form-control" placeholder="PIN" required>
+				        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="PIN" required>
 				        <div class="checkbox">
 				          <label>
 				            <input type="checkbox" value="remember-me"> Remember me
 				          </label>
 				        </div>
 				        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-						<a href="createaccount.html">Don't have an account? Sign up.</a>
+						<a href="createaccount.php">Don't have an account? Sign up.</a>
 				     </form>
 					<!-- <form class="form-horizontal" method="post" action="#">
 						<div class="form-group">
