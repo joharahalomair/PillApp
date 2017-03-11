@@ -105,20 +105,19 @@
 				          </label>
 				        </div>
 
-				        <div class="repeat">
+			        <div class="repeat">
 							<h4 for="repeats" class="days">Repeat Every</h4>
-							<label class = "repeatevery">
-								<input type="checkbox" class ="repeatevery" value="Day"> Week
-							</label>
-							<label class = "repeatevery">
-								<input type="checkbox" class ="repeatevery" value="Day"> 2 Weeks
-							</label>
-							<label class = "repeatevery">
-								<input type="checkbox" class ="repeatevery" value="Day"> 3 Weeks
-							</label>
-							<label class = "repeatevery">
-								<input type="checkbox" class ="repeatevery" value="Day"> Month
-							</label>
+							<div class=" row dropdown repeatevery">
+								<button class="repeatbtn btn btn-md btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">1 <span class="caret"></span></button>
+								 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							    <li><a href="#">2</a></li>
+							    <li><a href="#">3</a></li>
+							    <li><a href="#">4</a></li>
+							  	</ul>
+
+								<label class="week">Week</label>
+							</div>
+							
 				        </div>
 
 
@@ -126,9 +125,6 @@
 						 	<button type="button" class="btn btn-default">Cancel</button>
 						 	<button type="button" class="btn btn-default">Save</button>
 					</div>
-				       <!--  <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
-				        <button class="btn btn-lg btn-primary btn-block" type="submit">Cancel</button> -->
-
 				     </form>
 				</div>
 			</div>
