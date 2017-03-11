@@ -46,33 +46,37 @@ function getTomorrowDate() {
     $("#tomorrowDate").html(tomorrow);
 };
 
-function generateMedList() {
-    console.log('ready');
-    for (i = 0; i < weekday.length; i++) {
+/*DUmmy Data to populate dashboard*/
+var text = ["Monday", [12546, 'Advil', '7:00 AM', 'Yes'], [02546, 'Adderall', '8:00 AM', 'No'], [14746, 'Advil', '2:00 PM', 'No']];
+
+/*Creates list for each dashboard*/
+function generateMedList(list) {
+    for (i = 1; i < list.length; i++) {
+        var takenIndicator = "<img class='col-xs-4 green-check' src='assets/emptyCircle.png' onclick=diffImage(this)>";
+        if (list[i][3] === 'Yes') {
+            takenIndicator = "<img class='col-xs-4 green-check' src='assets/greenCheck.png' onclick=diffImage(this)>"
+        }
         $("#medicationList").append(
-            "<div class='row med-item col-s-12'> \
+            "<div class='row med-item'> \
                 <div class='row'> \
-                    <label id='medTime'>8:00 am</label> \
+                    <label id='medTime'>" + list[i][2] + "</label> \
                 </div> \
                 <div class='row'> \
-                    <img class='col-xs-4 green-check' src='assets/emptyCircle.png'> \
-                    <div class='col-xs-8 medName'>Adderall</div> \
-                </div> \
-                <div class='row'> \
-                    <img class='col-xs-4 green-check' src='assets/greenCheck.png'> \
-                    <div class='col-xs-8 medName'>Advil</div> \
+                    " + takenIndicator + "\
+                    <div class='col-xs-8 medName'>" + list[i][1] + "</div> \
                 </div> \
             </div>"
         );
     }
 };
 
-function generateMedication() {
-    "<div class='row'> \
-        <img class='col-xs-4 green-check' src='assets/greenCheck.png'> \
-        <div class='col-xs-8'>Adderall</div> \
-    </div>"
-};
+/*Changes image on whether or not a person took their pill*/
+function diffImage(img) 
+{
+   if(img.src.match("assets/emptyCircle.png")) img.src = "assets/greenCheck.png";
+   else img.src = "assets/emptyCircle.png";
+}
+
 /* code for clock*/
 
 (function( $ ) {

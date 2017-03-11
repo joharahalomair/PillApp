@@ -9,12 +9,12 @@
 	</head>
 	<body>
 		<div class="container">
-            <div class="row header col-s-12">
+            <div class="row header col-xs-12">
                 <div class="col-xs-4 header-label" id="dayName"></div>
                 <div class="col-xs-4 main-label">Today</div>
                 <div class="col-xs-4 header-label" id="currentDate"></div>
             </div>
-            <div class="row" id="medicationList">
+            <div class="row col-xs-12" id="medicationList">
             </div>
             <div>
                 <a href="tomorrow.html"><img id="rightArrow" src="assets/right-arrow-button.png"></a>
@@ -24,9 +24,10 @@
 
         <script src ="JS/script.js"></script>
         <script type="text/javascript">
-            getDayName()
-            getCurrentDate()
-            generateMedList()
+            getDayName();
+            getCurrentDate();
+            var text = ["Monday", [12546, 'Advil', '7:00 AM', 'Yes'], [02546, 'Pravastatin Sodium', '8:00 AM', 'No'], [02546, 'Adderall', '8:00 AM', 'No'], [02546, 'Omeprazole', '12:00 PM', 'Yes'], [14746, 'Advil', '2:00 PM', 'No'], [02546, 'Baclofen', '8:00 PM', 'No']];
+            generateMedList(text);
         </script>
 	</body>
 </html>
