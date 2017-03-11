@@ -13,7 +13,6 @@
     </header>
 	<p>
 	<?php
-	echo "Pouet !";
 	if($CONNEXION)
 	{
 		$email = $_POST['email'];
@@ -23,10 +22,8 @@
 		$create=	"INSERT INTO user(user_id, email, password, phone)
 					VALUES(NULL, '$email', '$password', '$phone');";
 		$action_create=mysql_query($create, $CONNEXION);
-		echo "Ca marche !";
 	}
 	else{
-		echo "Ca marche pas !";
 	}
 		?>
 	</p>
