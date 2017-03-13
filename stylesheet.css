@@ -117,11 +117,9 @@ body{
 .form-signin .form-signin-heading,
 .form-signin .checkbox, .form-signup .form-signup-heading {
   margin-bottom: 10px;
-	font-size: 10px;
-}
-h2{
 	font-size: 16px;
 }
+
 .form-signin .checkbox {
   font-weight: normal;
 }
