@@ -43,69 +43,6 @@ body{
 }
 
 
-/*time clock*/
-.spiralContainer {
-  border-radius: 50%;
-  width:200px;
-  height:200px;
-  overflow:hidden;
-  margin:20px;
-  
-  -webkit-animation: spin 3s linear 0s infinite reverse;
-  -moz-animation: spin 3s linear 0s infinite reverse;  
-  -ms-animation: spin 3s linear 0s infinite reverse;
-  -o-animation: spin 3s linear 0s infinite reverse;
-  animation: spin 3s linear 0s infinite reverse;
-  
-  -webkit-animation-play-state: paused;
-  -moz-animation-play-state: paused;
-  -ms-animation-play-state: paused;
-  -o-animation-play-state: paused;  
-  animation-play-state: paused;
-}
-.spiral {
-  width:200px;
-  height:200px;
-  border-radius: 50%;
-  background-image: url("assets/pillboxLogosmall.png");
-  background-size: 70%;
-  background-repeat:no-repeat;
-  background-position:50% 50%;
-  
-  
-  -webkit-animation: spin 6s linear 0s infinite normal;
-  -moz-animation: spin 6s linear 0s infinite normal;
-  -ms-animation: spin 6s linear 0s infinite normal;
-  -o-animation: spin 6s linear 0s infinite normal;
-  animation: spin 6s linear 0s infinite normal;
-}
-.spiralContainer:hover {
-  -webkit-animation-play-state: running;
-  -moz-animation-play-state: running;
-  -ms-animation-play-state: running;
-  -o-animation-play-state: running;
-  animation-play-state: running;
-}
-@keyframes spin {
-  0% { transform: rotate(360deg); }
-  100% { transform: rotate(0deg); }
-}
-@-webkit-keyframes spin {
-  0% {-webkit-transform: rotate(360deg); }
-  100% { -webkit-transform: rotate(0deg); }
-}
-@-ms-keyframes spin {
-  0% {-ms-transform: rotate(360deg); }
-  100% { -ms-transform: rotate(0deg); }
-}
-@-moz-keyframes spin {
-  0% { -moz-transform: rotate(360deg); }
-  100% { -moz-transform: rotate(0deg); }
-}
-@-o-keyframes spin {
-  0% { -o-transform: rotate(360deg); }
-  100% { -o-transform: rotate(0deg); }
-}
 
 
 /*sign in form*/
@@ -204,6 +141,7 @@ label {
 }
 
 .repeat {
+	margin-top: 70px;
 	margin-bottom: 40px; 
 }
 
@@ -294,10 +232,16 @@ label {
 	margin-top: 40px;
 	margin-bottom: 20px;
 }
-h4{
-	font-family:'Roboto', sans-serif;;
+.timecontainer{
+	margin-top: 10px;
 }
+
+h4{
+	font-family:'Roboto', sans-serif;
+}
+
 #addAnotherTime{
+	margin-top: 5px;
 	background-color: #33b5e5;
 	border-color: #33b5e5;
 	color: #ffffff;
@@ -310,8 +254,14 @@ h4{
 	color: #ffffff;
 }
 
-.times{
+
+.cancel, .save{
+	width:100px;
 	margin-bottom: 10px;
+	display: inline-block;
+  	margin-left: auto;
+ 	margin-right: auto;
+
 }
 
 /*Main Dashboard*/
