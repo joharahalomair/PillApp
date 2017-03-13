@@ -66,47 +66,75 @@
 								</span>
 							</div>
 						</div> -->
-						<div class="time form-group">
-						<h4 class="times">Time</h4>
-							<div class="clearfix timecontainer">
-								<div class="input-group clockpicker-with-callbacks">
-									<input type="text" class="form-control" value="10:10">
-									<span class="input-group-addon">
-										<span class="glyphicon glyphicon-time"></span>
-									</span>
-								</div>
+						<div id="time" class="time form-group">
+							<h4 class="times">Time</h4>
+						
+							<div class=" row dropdown timecontainer">
+								<button class="repeatbtn btn btn-md btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">1 <span class="caret"></span></button>
+								 <ul class="dropdown-menu hrs" aria-labelledby="dropdownMenu1">
+								    <li><a href="#">2</a></li>
+								    <li><a href="#">3</a></li>
+								    <li><a href="#">4</a></li>
+								    <li><a href="#">5</a></li>
+								    <li><a href="#">6</a></li>
+								    <li><a href="#">7</a></li>
+								    <li><a href="#">8</a></li>
+								    <li><a href="#">9</a></li>
+							  	</ul>
+
+								<label class=":">:</label>
+
+								<button class="repeatbtn btn btn-md btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">00 <span class="caret"></span></button>
+								<ul class="dropdown-menu mins" aria-labelledby="dropdownMenu2">
+								    <li><a href="#">05</a></li>
+								    <li><a href="#">10</a></li>
+								    <li><a href="#">15</a></li>
+								    <li><a href="#">20</a></li>
+								    <li><a href="#">25</a></li>
+								    <li><a href="#">30</a></li>
+								    <li><a href="#">35</a></li>
+								    <li><a href="#">40</a></li>
+								    <li><a href="#">45</a></li>
+								    <li><a href="#">50</a></li>
+								  	<li><a href="#">55</a></li>
+
+							  	</ul>
+
+							  	<button class="repeatbtn btn btn-md btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">AM <span class="caret"></span></button>
+								<ul class="dropdown-menu mins" aria-labelledby="dropdownMenu3">
+								    <li><a href="#">PM</a></li>
+							  	</ul>
 							</div>
-						</div>
 						<div><button class="glyphicon glyphicon-plus-sign btn" id="addAnotherTime"></button></div>
 
 
 				        <div class="days checkbox abc-checkbox-circle">
 				          <h4 for="days">Days</h4>
-				          <label class = "day">
-				            <input type="checkbox" class ="styled" value="Day"> Mondays
+				          <label class = "day col-xs-4">
+				            <input type="checkbox" class ="styled" value="Day"> Mon
 				          </label>
-				          <label class = "day">
-				            <input type="checkbox" class ="day" value="Day"> Tuesday
+				          <label class = "day col-xs-4">
+				            <input type="checkbox" class ="day" value="Day"> Tue
 				          </label>
-				          <label class = "day">
-				            <input type="checkbox" class ="day" value="Day"> Wednesday
+				          <label class = "day col-xs-4">
+				            <input type="checkbox" class ="day" value="Day"> Wed
 				          </label>
-				          <label class = "day">
-				            <input type="checkbox" class ="day" value="Day"> Thursday
+				          <label class = "day col-xs-4">
+				            <input type="checkbox" class ="day" value="Day"> Thur
 				          </label>
-				          <label class = "day">
-				            <input type="checkbox" class ="day" value="Day"> Friday
+				          <label class = "day col-xs-4">
+				            <input type="checkbox" class ="day" value="Day"> Fri
 				          </label>
-				          <label class = "day">
-				            <input type="checkbox" class ="day" value="Day"> Saturday
+				          <label class = "day col-xs-4">
+				            <input type="checkbox" class ="day" value="Day"> Sat
 				          </label>
-				          <label class = "day">
-				            <input type="checkbox" class ="day" value="Day"> Sunday
+				          <label class = "day col-xs-4">
+				            <input type="checkbox" class ="day" value="Day"> Sun
 				          </label>
 				        </div>
-
-			        <div class="repeat">
-							<h4 for="repeats" class="days">Repeat Every</h4>
+					<br>
+			       		<div class="repeat">
+							<h4 for="repeat" class="repeats">Repeat Every</h4>
 							<div class=" row dropdown repeatevery">
 								<button class="repeatbtn btn btn-md btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">1 <span class="caret"></span></button>
 								 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -121,10 +149,10 @@
 				        </div>
 
 
-				        <div class="btn-group btn-group-lg" role="group">
-						 	<button type="button" class="btn btn-default">Cancel</button>
-						 	<button type="button" class="btn btn-default">Save</button>
-					</div>
+				      		<div class="buttons col-sm-12">
+						 	<a type="button" class="cancel btn btn-md btn-default" href="mainDashboard.html">Cancel</a>
+						 	<a type="button" class="save btn btn-md btn-default" href="#">Save</a>
+						</div>
 				     </form>
 				</div>
 			</div>
