@@ -57,7 +57,7 @@ function generateMedList(list) {
             takenIndicator = "<img class='col-xs-4 green-check' src='assets/greenCheck.png' onclick=diffImage(this)>"
         }
         $("#medicationList").append(
-            "<div class='row med-item onclick='location.href=\"EditMedication.html\"'> \
+            "<div class='row med-item col-xs-12' onclick='location.href=\"EditMedication.html\"'> \
                 <div class='row'> \
                     <label id='medTime'>" + list[i][3] + "</label> \
                 </div> \
