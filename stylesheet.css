@@ -380,7 +380,13 @@ h4{
     width: 60px;
 	height: 60px;
 }
-
+#exitButton{
+	position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 30px;
+	height: 30px;
+}
 #mainDashboard{
   background: #ffffff; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#f2f2f2, #ffffff); /* For Safari 5.1 to 6.0 */
