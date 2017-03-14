@@ -232,11 +232,11 @@ label {
 	margin-top: 40px;
 	margin-bottom: 20px;
 }
-.timecontainer{
+.timecontainer, .repeatevery{
 	margin-top: 10px;
 	width: 100%;
 }
-.timecontainer select {
+.timecontainer select, .repeatevery select {
     border: 1px solid #ccc;
     border-radius: 3px;
     box-shadow: none;
@@ -255,7 +255,7 @@ label {
     background: url('assets/arrowdown.png') no-repeat right;
     background-size: 20%;
 }
-.timecontainer select:focus {
+.timecontainer select:focus, .repeatevery select:focus {
     outline: none;
 }
 h4{
