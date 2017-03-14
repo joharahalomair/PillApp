@@ -19,7 +19,7 @@ body{
     height: 100%;
     width: 90%;
     max-width:460px;
-    max-height:800px;
+    max-height:90%;
     min-width:460px;
     min-height:800px;
  	background-color: #fffdea;
@@ -234,8 +234,30 @@ label {
 }
 .timecontainer{
 	margin-top: 10px;
+	width: 100%;
 }
-
+.timecontainer select {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: none;
+    -webkit-appearance: none;
+    color: #9E9E9E;
+    height: 30px;
+    width: 82px;
+    display: inline-block;
+    text-align: left;
+    margin-right: 5px;
+    font-size: 12px;
+    background:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, #33b5e5, #33b5e5);;
+    background: url('assets/arrowdown.png') no-repeat right;
+    background-size: 20%;
+}
+.timecontainer select:focus {
+    outline: none;
+}
 h4{
 	font-family:'Roboto', sans-serif;
 }
