@@ -345,7 +345,7 @@ h4{
 	color: #000000;
 }
 
-.medName{
+.medName, .medDosage {
 	font-size: 22px;
 	font-style: bold;
 	font-family: 'Oxygen', sans-serif;
