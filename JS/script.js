@@ -59,11 +59,12 @@ function generateMedList(list) {
         $("#medicationList").append(
             "<div class='row med-item onclick='location.href=\"EditMedication.html\"'> \
                 <div class='row'> \
-                    <label id='medTime'>" + list[i][2] + "</label> \
+                    <label id='medTime'>" + list[i][3] + "</label> \
                 </div> \
                 <div class='row'> \
                     " + takenIndicator + "\
-                    <div class='col-xs-8 medName'>" + list[i][1] + "</div> \
+                    <div class='col-xs-5 medName'>" + list[i][1] + "</div> \
+                    <div class='col-xs-3 medDosage'>" + list[i][2] + "</div> \
                 </div> \
             </div>"
         );
