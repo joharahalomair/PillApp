@@ -6,8 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	</head>
 	<body>
-		<div class="container">
-			<div class="row main">
+		<div class="container col-sm-12">
+			<div class="row main col-sm-12">
 				<div class="logo">
 					<img class="logo" src="assets/pillboxLogosmall.png">
 				</div>
@@ -17,7 +17,7 @@
 						<hr />
 					</div>
 				</div>
-				<div class="main-login main-center">
+				<div class="main-login main-center col-sm-12">
 					<form method= "post" class="form-signup" action="processcreateaccount.php">
 				        <h2 class="form-signup-heading">Create Account</h2>
 					<label for="inputEmail" class="sr-only">Email address</label>
