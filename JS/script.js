@@ -60,10 +60,11 @@ function generateMedList(list) {
             "<div class='row med-item col-xs-12'> \
                 <div class='row'> \
                     <label id='medTime'>" + list[i][3] + "</label> \
+                    <img class='pull-right ellipses' src='assets/ellipses.png' onclick='location.href=\"EditMedication.html\"'> \
                 </div> \
                 <div class='row'> \
                     " + takenIndicator + "\
-                    <div class='col-xs-5 medName' onclick='location.href=\"EditMedication.html\"'>" + list[i][1] + "</div> \
+                    <div class='col-xs-5 medName'>" + list[i][1] + "</div> \
                     <div class='col-xs-3 medDosage'>" + list[i][2] + "</div> \
                 </div> \
             </div>"
