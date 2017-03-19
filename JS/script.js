@@ -86,6 +86,6 @@ function addAnotherTime(){
 /*scrolls the right arrow as the window scrolls*/
 $(window).scroll(function(){
     $('#rightArrow').css({
-        'top': $(this).scrollTop() +100 //Why this 15, because in the CSS, we have set left 15, so as we scroll, we would want this to remain at 15px left
+        'top': $(this).scrollTop() +200 //Why this 15, because in the CSS, we have set left 15, so as we scroll, we would want this to remain at 15px left
     });
 });
