@@ -110,16 +110,17 @@
 				          </label>
 				        </div>
 
-			        <div class="repeat">
-							<h4 for="repeats" class="days">Repeat Every</h4>
+			   			<br>
+			       		<div class="repeat">
+							<h4 for="repeat" class="repeats">Repeat Every</h4>
 							<div class=" row dropdown repeatevery">
-								<button class="repeatbtn btn btn-md btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">1 <span class="caret"></span></button>
-								 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a href="#">2</a></li>
-							    <li><a href="#">3</a></li>
-							    <li><a href="#">4</a></li>
-							  	</ul>
-
+								<select class="repeatby block col-md-4">
+									<option>-repeat-</option>
+									    <option>1</option>
+									    <option>2</option>
+									<option>3</option>
+									<option>4</option>
+							  	</select>
 								<label class="week">Week</label>
 							</div>
 							
@@ -135,6 +136,7 @@
 			</div>
 		</div>
 		
+
 <script src ="JS/script.js"></script>
 <script type="text/javascript">
 	 //$("#btnAddAddress").click(addAnotherTime());
@@ -142,73 +144,6 @@
   	$(".timecontainer:first").clone().appendTo("#time"); 
 	});
 	 $('.dropdown-toggle').dropdown()
-</script>
-
-
-<script type="text/javascript" src="clockpicker-gh-pages/assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="clockpicker-gh-pages/assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="clockpicker-gh-pages/dist/bootstrap-clockpicker.min.js"></script>
-<script type="text/javascript">
-$('.clockpicker').clockpicker()
-	.find('input').change(function(){
-		console.log(this.value);
-	});
-var input = $('#single-input').clockpicker({
-	placement: 'bottom',
-	align: 'left',
-	autoclose: true,
-	'default': 'now'
-});
-
-$('.clockpicker-with-callbacks').clockpicker({
-		donetext: 'Done',
-		init: function() { 
-			console.log("colorpicker initiated");
-		},
-		beforeShow: function() {
-			console.log("before show");
-		},
-		afterShow: function() {
-			console.log("after show");
-		},
-		beforeHide: function() {
-			console.log("before hide");
-		},
-		afterHide: function() {
-			console.log("after hide");
-		},
-		beforeHourSelect: function() {
-			console.log("before hour selected");
-		},
-		afterHourSelect: function() {
-			console.log("after hour selected");
-		},
-		beforeDone: function() {
-			console.log("before done");
-		},
-		afterDone: function() {
-			console.log("after done");
-		}
-	})
-	.find('input').change(function(){
-		console.log(this.value);
-	});
-
-// Manually toggle to the minutes view
-$('#check-minutes').click(function(e){
-	// Have to stop propagation here
-	e.stopPropagation();
-	input.clockpicker('show')
-			.clockpicker('toggleView', 'minutes');
-});
-if (/mobile/i.test(navigator.userAgent)) {
-	$('input').prop('readOnly', true);
-}
-</script>
-<script type="text/javascript" src="clockpicker-gh-pages/assets/js/highlight.min.js"></script>
-<script type="text/javascript">
-hljs.configure({tabReplace: '    '});
-hljs.initHighlightingOnLoad();
 </script>
 	</body>
 </html>
