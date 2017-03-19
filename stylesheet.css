@@ -405,6 +405,11 @@ h4{
 	color: #000000;
 }
 
+.ellipses {
+	width: 18%;
+	margin-top: -8px;
+}
+
 .medName, .medDosage {
 	font-size: 22px;
 	font-style: bold;
