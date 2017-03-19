@@ -82,3 +82,10 @@ function diffImage(img)
 function addAnotherTime(){
     $("#time").append($(".timecontainer").html());
 };
+
+/*scrolls the right arrow as the window scrolls*/
+$(window).scroll(function(){
+    $('.rightArrow').css({
+        'top': $(this).scrollTop() +350 //Why this 15, because in the CSS, we have set left 15, so as we scroll, we would want this to remain at 15px left
+    });
+});
