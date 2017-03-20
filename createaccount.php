@@ -6,8 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	</head>
 	<body>
-		<div class="container">
-			<div class="row main">
+	<?php
+		session_start();
+		session_destroy();
+	?>
+		<div class="container col-sm-12">
+			<div class="row main col-sm-12">
 				<div class="logo">
 					<img class="logo" src="assets/pillboxLogosmall.png">
 				</div>
@@ -17,7 +21,7 @@
 						<hr />
 					</div>
 				</div>
-				<div class="main-login main-center">
+				<div class="main-login main-center col-sm-12">
 					<form method= "post" class="form-signup" action="processcreateaccount.php">
 				        <h2 class="form-signup-heading">Create Account</h2>
 					<label for="inputEmail" class="sr-only">Email address</label>
@@ -27,7 +31,7 @@
 				        <label for="inputPassword" class="sr-only">Password</label>
 				        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="PIN" required>
 				        <label for="inputPassword" class="sr-only">Confirm Password</label>
-				        <input name="confirmpassword" type="confirmpassword" id="inputPassword" class="form-control" placeholder="Confirm PIN" required>
+				        <input name="confirmpassword" type="password" id="inputPassword" class="form-control" placeholder="Confirm PIN" required>
 				        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
 				     </form>
 

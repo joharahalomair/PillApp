@@ -19,7 +19,7 @@ body{
     height: 100%;
     width: 90%;
     max-width:460px;
-    max-height:800px;
+    max-height:90%;
     min-width:460px;
     min-height:800px;
  	background-color: #fffdea;
@@ -43,69 +43,6 @@ body{
 }
 
 
-/*time clock*/
-.spiralContainer {
-  border-radius: 50%;
-  width:200px;
-  height:200px;
-  overflow:hidden;
-  margin:20px;
-  
-  -webkit-animation: spin 3s linear 0s infinite reverse;
-  -moz-animation: spin 3s linear 0s infinite reverse;  
-  -ms-animation: spin 3s linear 0s infinite reverse;
-  -o-animation: spin 3s linear 0s infinite reverse;
-  animation: spin 3s linear 0s infinite reverse;
-  
-  -webkit-animation-play-state: paused;
-  -moz-animation-play-state: paused;
-  -ms-animation-play-state: paused;
-  -o-animation-play-state: paused;  
-  animation-play-state: paused;
-}
-.spiral {
-  width:200px;
-  height:200px;
-  border-radius: 50%;
-  background-image: url("assets/pillboxLogosmall.png");
-  background-size: 70%;
-  background-repeat:no-repeat;
-  background-position:50% 50%;
-  
-  
-  -webkit-animation: spin 6s linear 0s infinite normal;
-  -moz-animation: spin 6s linear 0s infinite normal;
-  -ms-animation: spin 6s linear 0s infinite normal;
-  -o-animation: spin 6s linear 0s infinite normal;
-  animation: spin 6s linear 0s infinite normal;
-}
-.spiralContainer:hover {
-  -webkit-animation-play-state: running;
-  -moz-animation-play-state: running;
-  -ms-animation-play-state: running;
-  -o-animation-play-state: running;
-  animation-play-state: running;
-}
-@keyframes spin {
-  0% { transform: rotate(360deg); }
-  100% { transform: rotate(0deg); }
-}
-@-webkit-keyframes spin {
-  0% {-webkit-transform: rotate(360deg); }
-  100% { -webkit-transform: rotate(0deg); }
-}
-@-ms-keyframes spin {
-  0% {-ms-transform: rotate(360deg); }
-  100% { -ms-transform: rotate(0deg); }
-}
-@-moz-keyframes spin {
-  0% { -moz-transform: rotate(360deg); }
-  100% { -moz-transform: rotate(0deg); }
-}
-@-o-keyframes spin {
-  0% { -o-transform: rotate(360deg); }
-  100% { -o-transform: rotate(0deg); }
-}
 
 
 /*sign in form*/
@@ -117,8 +54,9 @@ body{
 .form-signin .form-signin-heading,
 .form-signin .checkbox, .form-signup .form-signup-heading {
   margin-bottom: 10px;
-	font-size: 10px;
+	font-size: 16px;
 }
+
 .form-signin .checkbox {
   font-weight: normal;
 }
@@ -203,6 +141,7 @@ label {
 }
 
 .repeat {
+	margin-top: 70px;
 	margin-bottom: 40px; 
 }
 
@@ -277,8 +216,8 @@ label {
 }
 
 .logo {
-	width: 50%;
-	height:50%;
+	width: 70%;
+	height:70%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -293,10 +232,66 @@ label {
 	margin-top: 40px;
 	margin-bottom: 20px;
 }
-h4{
-	font-family:'Roboto', sans-serif;;
+.timecontainer {
+	margin-top: 10px;
+	width: 100%;
 }
+.timecontainer select {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: none;
+    -webkit-appearance: none;
+    color: #9E9E9E;
+    height: 30px;
+    width: 82px;
+    display: inline-block;
+    text-align: left;
+    margin-right: 5px;
+    font-size: 12px;
+    background:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, #33b5e5, #33b5e5);;
+    background: url('assets/arrowdown.png') no-repeat right;
+    background-size: 20%;
+}
+.timecontainer select:focus{
+    outline: none;
+}
+
+.repeatevery{
+	margin-top: 10px;
+	width: 100%;
+}
+.repeatevery select{
+	border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: none;
+    -webkit-appearance: none;
+    color: #9E9E9E;
+    height: 30px;
+    width: 82px;
+    display: inline-block;
+    text-align: left;
+    margin-right: 5px;
+	margin-left: 5px;
+    font-size: 12px;
+    background:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, #33b5e5, #33b5e5);;
+    background: url('assets/arrowdown.png') no-repeat right;
+    background-size: 20%;
+}
+.repeatevery select:focus {
+    outline: none;
+}
+h4{
+	font-family:'Roboto', sans-serif;
+}
+
 #addAnotherTime{
+	margin-top: 5px;
 	background-color: #33b5e5;
 	border-color: #33b5e5;
 	color: #ffffff;
@@ -309,8 +304,14 @@ h4{
 	color: #ffffff;
 }
 
-.times{
+
+.cancel, .save{
+	width:100px;
 	margin-bottom: 10px;
+	display: inline-block;
+  	margin-left: auto;
+ 	margin-right: auto;
+
 }
 
 /*Main Dashboard*/
@@ -379,7 +380,13 @@ h4{
     width: 60px;
 	height: 60px;
 }
-
+#exitButton{
+	position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 30px;
+	height: 30px;
+}
 #mainDashboard{
   background: #ffffff; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#f2f2f2, #ffffff); /* For Safari 5.1 to 6.0 */
@@ -394,7 +401,7 @@ h4{
 	color: #000000;
 }
 
-.medName{
+.medName, .medDosage {
 	font-size: 22px;
 	font-style: bold;
 	font-family: 'Oxygen', sans-serif;
