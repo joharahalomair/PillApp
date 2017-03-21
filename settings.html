@@ -5,6 +5,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link = rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!-- Bootstrap Toggle-->
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <!-- /Bootstrap Toggle-->
 </head>
 <body>
   <div class="container">
@@ -12,37 +16,37 @@
     <form class="settings">
       <div class="row">
         <label for="all-notifications" class="settings-label">All Notifications</label>
-        <input class="select1" type="checkbox"/>
+        <input class="select1" type="checkbox" checked data-toggle="toggle" data-size="mini"/>
       </div>
 
       <div class="row sub-p">
         <label for="on-time" class="subsettings-label">On Time</label>
-        <input class="select1-1" type="checkbox"/>
+        <input class="select1-1" type="checkbox" checked data-toggle="toggle" data-size="mini"/>
       </div>
 
       <div class="row sub-p">
         <label for="on-refill"class="subsettings-label">On Refill</label>
-        <input class="select1-2" type="checkbox"/>
+        <input class="select1-2" type="checkbox" checked data-toggle="toggle" data-size="mini"/>
       </div>
 
       <div class="row sub-p">
         <label for="text"class="subsettings-label">Text</label>
-        <input class="select1-3" type="checkbox"/>
+        <input class="select1-3" type="checkbox" checked data-toggle="toggle" data-size="mini"/>
       </div>
 
       <div class="row sub-p">
         <label for="email"class="subsettings-label">Email</label>
-        <input class="select1-4" type="checkbox"/>
+        <input class="select1-4" type="checkbox" checked data-toggle="toggle" data-size="mini"/>
       </div>
 
       <div class="row">
         <label for="enable-pin" class="settings-label">Enable Pin</label>
-        <input class="select2" type="checkbox"/>
+        <input class="select2" type="checkbox" checked data-toggle="toggle" data-size="mini"/>
       </div>
 
       <div class="row">
         <label for="change-pin" class="settings-label">Change Pin</label>
-        <input class="select3" type="checkbox"/>
+        <input class="select3" type="checkbox" checked data-toggle="toggle" data-size="mini"/>
       </div>
 
       <button id="save-cancel" class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
