@@ -57,9 +57,10 @@ function generateMedList(list) {
             takenIndicator = "<img class='col-xs-4 green-check' src='assets/greenCheck.png' onclick=diffImage(this)>"
         }
         $("#medicationList").append(
-            "<div class='row med-item onclick='location.href=\"EditMedication.html\"'> \
+            "<div class='row med-item col-xs-12'> \
                 <div class='row'> \
                     <label id='medTime'>" + list[i][3] + "</label> \
+                    <img class='pull-right ellipses' src='assets/ellipses.png' onclick='location.href=\"EditMedication.html\"'> \
                 </div> \
                 <div class='row'> \
                     " + takenIndicator + "\
@@ -82,3 +83,9 @@ function diffImage(img)
 function addAnotherTime(){
     $("#time").append($(".timecontainer").html());
 };
+/*scrolls the right arrow as the window scrolls*/
+$(window).scroll(function(){
+    $('#rightArrow').css({
+        'top': $(this).scrollTop() +250 //Why this 15, because in the CSS, we have set left 15, so as we scroll, we would want this to remain at 15px left
+    });
+});
