@@ -83,7 +83,6 @@ function diffImage(img)
 function addAnotherTime(){
     $("#time").append($(".timecontainer").html());
 };
-
 /*scrolls the right arrow as the window scrolls*/
 $(window).scroll(function(){
     $('#rightArrow').css({

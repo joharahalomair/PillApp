@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -7,34 +7,59 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link rel="stylesheet" type="text/css" href="clockpicker-gh-pages/dist/bootstrap-clockpicker.min.css">
 		<link rel="stylesheet" type="text/css" href="clockpicker-gh-pages/assets/css/github.min.css">
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js" ></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="/resources/demos/style.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript">
+		$(function() 
+		{
+		 $( "#inputMedicationName" ).autocomplete({
+		  source: 'search.php',
+		  minLength: 3
+		 });
+		});
+		</script>
+		<script type="text/javascript">
+		$(function() 
+		{
+		 $( "#inputDosage" ).autocomplete({
+		  source: 'searchdosage.php',
+		  minLength: 1
+		 });
+		});
+		</script>
 
 	</head>
+	<?php
+	require("connectiondatabase.php");
+	session_start();
+	?>
 	<body>
 		<div class="container col-sm-12">
 			<div class="row main">
 				<div class="main-center col-sm-12">
-					<form class="form-addmedication">
+					<form method="POST" class="form-addmedication">
 				        <h1 class="form-medicationname">Add Medication</h1>
 				        <hr>
+						
+				        <div class="ui-widget">
 				        <label for="inputMedicationName" class="sr-only">Medication Name</label>
-				        <input type="medicationname" id="inputMedicationName" class="form-control" placeholder="Medication Name" required autofocus>
 
-				       <div class="dosage dropdown">
-					        <label for="inputDosage" class="sr-only">Medication Dosage</label>
-					        <button type="medicationdosage" class="dosagebtn btn btn-default dropdown-toggle btn-lg btn-primary btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Dosage <span class="caret"></span></button>
-					          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a href="#">Action</a></li>
-							    <li><a href="#">Another action</a></li>
-							    <li><a href="#">Something else here</a></li>
-							    <li role="separator" class="divider"></li>
-							    <li><a href="#">Separated link</a></li>
-							  </ul>
-				        </div>
+				    <input name="drug_name" type="text" id="inputMedicationName" class="form-control" placeholder="Medication Name" required autofocus>
+						</div>
+						
+						<br/>
+						<div class="dosage dropdown">
+						<div class="ui-widget">
+				        <label for="inputDosage" class="sr-only">Medication Dosage</label>
+				        <input name="drug_strength" type="text" id="inputDosage" class="form-control" placeholder="Dosage" required autofocus>
+						</div>
+						</div>
+						
 					<div id="time" class="time form-group">
 						<h4 class="times">Time</h4>
 

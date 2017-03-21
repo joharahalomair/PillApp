@@ -7,16 +7,27 @@
 	</head>
 	<body>
 	<?php
-	require("connectiondatabase.php");?>
+	require("connectiondatabase.php");
+	session_start();
+	?>
 	<p>
 	<?php
 	if($CONNEXION)
 	{
-		$email = $_POST['email'];
+		$drug_name = $_POST['drug_name'];
 		$password = $_POST['password'];
 		$phone = $_POST['phone'];
 		
-		$create=	"INSERT INTO user(user_id, email, password, phone)
+		if (!empty($_POST['lacspeche'])) 
+				{
+					foreach ($_POST['lacspeche'] as $check)
+					{
+						$lacspeche = $lacspeche.' '.$check;
+					}
+				}
+				
+				
+		$create=	"INSERT INTO prescription(presc_id, drug_name, repeat, user_id)
 					VALUES(NULL, '$email', '$password', '$phone');";
 		$action_create=mysql_query($create, $CONNEXION);
 		?>
@@ -24,7 +35,7 @@
 			<p>You will now be redirected to the homepage.</p>
 			<br/><br/>
 		<?php
-		header('Refresh: 5; URL=index.html');
+		header('Refresh: 10; URL=index.html');
 	}
 	else{
 	}
@@ -32,4 +43,3 @@
 	</p>
 	
 </body>
-	

@@ -6,6 +6,10 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	</head>
 	<body>
+	<?php
+		session_start();
+		session_destroy();
+	?>
 		<div class="container col-sm-12">
 			<div class="row main col-sm-12">
 				<div class="logo">
@@ -27,7 +31,7 @@
 				        <label for="inputPassword" class="sr-only">Password</label>
 				        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="PIN" required>
 				        <label for="inputPassword" class="sr-only">Confirm Password</label>
-				        <input name="confirmpassword" type="confirmpassword" id="inputPassword" class="form-control" placeholder="Confirm PIN" required>
+				        <input name="confirmpassword" type="password" id="inputPassword" class="form-control" placeholder="Confirm PIN" required>
 				        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
 				     </form>
 

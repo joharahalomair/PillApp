@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+        <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">  
+	</head>
+	<body>
+		<div class="container col-sm-12">
+            		<div class="row header col-xs-12">
+				<div class="col-xs-4 header-label" id="dayName"></div>
+				<div class="col-xs-4 main-label">Today</div>
+				<div class="col-xs-4 header-label" id="currentDate"></div>
+			</div>
+            		<div class="row col-xs-12" id="medicationList"></div>
+            		<div class="col-xs-4">
+                		<a href="tomorrow.html"><img id="rightArrow" src="assets/right-arrow-button.png"></a>
+				<a href="AddMedication.html"><img id="newMed" src="assets/addButton.png"></a>
+				<a href="index.html"><img id="exitButton" src="assets/exitButton.png"></a>
+            		</div>
+		</div>
+
+        <script src ="JS/script.js"></script>
+        <script type="text/javascript">
+            getDayName();
+            getCurrentDate();
+            var text = ["Monday", [12546, 'Advil', '250mg', '7:00 AM', 'Yes'], [02546, 'Pravastatin Sodium', '40mg', '8:00 AM', 'No'], [02546, 'Adderall', '100mg', '8:00 AM', 'No'], [02546, 'Omeprazole', '20mg', '12:00 PM', 'Yes'], [14746, 'Advil', '250mg', '2:00 PM', 'No'], [02546, 'Baclofen', '10mg', '8:00 PM', 'No']];
+            generateMedList(text);
+        </script>
+	</body>
+</html>
